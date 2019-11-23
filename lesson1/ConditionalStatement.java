@@ -1,54 +1,33 @@
-import java.util.*;
-
 class ConditionalStatement {
-	
-	static Scanner reader = new Scanner(System.in);
-	
-	public static void main(String[] argv){
-		
-		int age;
-		char sex;
-		float growth;
-		char firstLetterOfName;
-		
-		
-		System.out.println("Type your age:");
-		age = reader.nextInt();
-		
+	public static void main(String[] argv) {				
+		int age = 21;
 		if(age > 20) {
 			System.out.println("You are an adult. Welcome! ");
 		}
 		
-		System.out.println("Mark your gender (m/f/o): ");
-		sex = reader.next().charAt(0);
-		
+		char sex = 'h';
 		if(sex == 'm'){
 			System.out.println("You are a man");
-		} else if (sex == 'f'){
-			System.out.println("You are a woman");
-		} else {
-			System.out.println("You are neither man nor woman. Who are you?");
+		} 
+		
+		if(sex == 'm'){
+			System.out.println("You are not a man.");
 		}
 		
-		System.out.println("Enter your height: ");
-		growth = reader.nextFloat(); 
+		float growth = 1.20f;
 		if(growth < 1.80){
 			System.out.println("You are short.");
 		} else {
 			System.out.println("Wow, you are tall!");
 		}
 		
-		System.out.println("Enter your first name: ");
-		firstLetterOfName = reader.next().charAt(0); 
-		
+		char firstLetterOfName = 'O';
 		if(firstLetterOfName == 'M'){
 			System.out.println("Your name starts with the letter M");
-		}  else if (firstLetterOfName == 'I') {
+		} else if (firstLetterOfName == 'I') {
 			System.out.println("Your name starts with the letter I");
 		} else {
 			System.out.println("Your name starts with an unknown letter");
-		}
-
-		
+		}	
 	}
 }
