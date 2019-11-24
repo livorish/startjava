@@ -22,5 +22,4 @@ class Variable {
 		System.out.printf("Is it a desctop computer? %b  \n \n \n", isDesktop);
 		System.out.println("****************************");
 	}
-	
 }
