@@ -8,7 +8,7 @@ class Cycle {
 		
 		// task 2. Выведите на консоль с помощью цикла while все числа от [6, -6] (шаг итерации равен 2)
 		int a = 6;
-		while(a > -7){
+		while(a > -7) {
 			System.out.println("Digit: " + a);
 			a -= 2;
 		}

@@ -10,8 +10,8 @@ class Variable {
 		double hddTotalSize = 0.8202;		
 		boolean isDesktop = true;
 
-		System.out.printf("****************************  \n");
-		System.out.printf("-----Hardware information----  \n \n \n");
+		System.out.printf("****************************\n");
+		System.out.printf("-----Hardware information----\n \n \n");
 		System.out.printf("The bitness of the system: %d \n" , bits);
 		System.out.printf("Cache Memory in Computer %d  \n", cache);
 		System.out.printf("Network Speed in bytes: %d  \n", networkSpeed);
