@@ -2,7 +2,7 @@ class Cycle {
 	
 	public static void main(String[] argv) {
 		// task 1. Выведите на консоль с помощью цикла for все числа от [0, 20]
-		for (int i = 0; i < 21; i++){
+		for (int i = 0; i < 21; i++) {
 			System.out.println("Number: " + i);
 		}
 		
