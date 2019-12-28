@@ -2,7 +2,7 @@ class GuessinGame {
 	
 	public static void main(String[] args) {
 		int guessNumber = 5;
-		int myTurn = 0;
+		int myTurn = 1;
 		int endPoint = 100;
 		String rules = "This is a simulation of a guessing game.\nThe game initializer "
 					+ "thinks of an integer between 1 and 100.\n"
