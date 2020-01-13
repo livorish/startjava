@@ -1,25 +1,24 @@
 public class Wolf {
-	
-	String sex;
-	String name;
-	float weight;
-	int age;
-	String coloring;
-	
-	void move() {
-		System.out.println("идет");
+
+    String sex;
+    String name;
+    float weight;
+    int age;
+    String coloring;
+
+    void move() {
+        System.out.println("идет");
     }
-	
-	String sit() {
-		return "присела";
+
+    String sit() {
+        return "присела";
     }
-	
-	boolean howl() {
-		return true; 
+
+    boolean howl() {
+        return true;
     }
-	
-	String hunt() {
-		return "охотится"; 
+
+    String hunt() {
+        return "охотится";
     }
-	
 }
