@@ -7,7 +7,6 @@ public class GuessNumber {
     private int range = max - min + 1;
     private int guessNumber = (int)(Math.random() * range) + min;
     private int playerMove;
-    private String result;
 
     public boolean checkOut(int playerMove) {
         if(playerMove < guessNumber) {
