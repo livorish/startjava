@@ -9,10 +9,6 @@ public class GuessNumber {
     private int playerMove;
     private String result;
 
-    public int getGuessNum() {
-        return guessNumber;
-    }
-
     public boolean checkOut(int playerMove) {
         if(playerMove < guessNumber) {
             System.out.println("It's less than the guess number.");
