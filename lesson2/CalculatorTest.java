@@ -5,7 +5,6 @@ class CalculatorTest {
     public static void main(String[] argv) {
         Scanner inputUser = new Scanner(System.in);
         Calculator calc = new Calculator();
-        boolean flag = true;
         String answer = "";
         while(true) {
         if (answer.equals("no")) {

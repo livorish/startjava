@@ -49,7 +49,7 @@ public class JaegerConstructor {
         System.out.println(this.modelName + " has a mark: " + this.mark);
         System.out.println(this.modelName + " was made in " + this.origin);
         System.out.println(this.modelName + " has an equipment: " + this.equipment);
-        System.out.println(this.modelName + " has en energyCore: " + this.energyCore);
+        System.out.println(this.modelName + " has an energyCore: " + this.energyCore);
         System.out.println(this.modelName + " has a speed: " + this.speed);
         System.out.println(this.modelName + " has an armor: " + this.armor);
         System.out.println(this.modelName + " height is " + this.height);
