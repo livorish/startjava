@@ -3,42 +3,30 @@ import java.util.Scanner;
 class CalculatorTest {
 
     public static void main(String[] argv) {
-        checkingResult();
-    }
-
-    public static void checkingResult() {
         Scanner inputUser = new Scanner(System.in);
-        Calculator task = new Calculator();
-        int num1 = inputUser.nextInt();
-        char s = inputUser.next().charAt(0);
-        int num2 = inputUser.nextInt();
+        Calculator calc = new Calculator();
+        boolean flag = true;
+        String answer = "";
+        while(true) {
+        if (answer.equals("no")) {
+            break;
+        } else {
+            System.out.print("Input the first number: ");
+            int num1 = inputUser.nextInt();
+            calc.setNumberOne(num1);
 
-        System.out.println("Введите первое число: " + num1);
-        System.out.println("Введите знак математической операции: " + s);
-        System.out.println("Введите второе число: " + num2);
+            System.out.print("Input a math operator: ");
+            char s = inputUser.next().charAt(0);
+            calc.setOperator(s);
 
-        char sign = task.takeSign(s);
-        switch(sign) {
-            case '+':
-                System.out.println("The sum of two numbers is equal to " + task.addNumbers(num1, num2));
-                break;
-            case '-':
-                System.out.println("The difference between two numbers is equal to " + task.subtractNumbers(num1, num2));
-                break;
-            case '*':
-                System.out.println("The product of two numbers is equal to " + task.multiplyNumbers(num1, num2));
-                break;
-            case '/':
-                System.out.println("The quotient of two numbers is equal to " + task.divideNumbers(num1, num2));
-                break;
-            case '^':
-                System.out.println("The power of two numbers is equal to " + task.powerNumbers(num1, num2));
-                break;
-            case '%':
-                System.out.println("The remainder of two numbers is equal to " + task.remaindNumbers(num1, num2));
-                break;
-            default:
-                System.out.println("Something wrong");
+            System.out.print("Input the second number: ");
+            int num2 = inputUser.nextInt();
+            calc.setNumberTwo(num2);
+            calc.checkingResult();
+
+            System.out.println("Would you like to calculate something else? Input 'yes' or 'no'");
+            answer = inputUser.next();
+            }
         }
     }
 }
