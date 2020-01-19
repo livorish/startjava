@@ -1,51 +1,39 @@
 import java.lang.Math;
-
+import java.util.Scanner;
 public class GuessNumber {
 
+    Scanner input = new Scanner(System.in);
     private int max = 100;
     private int min = 1;
     private int range = max - min + 1;
     private int guessNumber = (int)(Math.random() * range) + min;
+    private String name;
 
-    public boolean checkOut(int playerMove) {
-        if(playerMove < guessNumber) {
-            System.out.println("It's less than the guess number.");
-            return false;
-        } else if (playerMove > guessNumber) {
-            System.out.println("It's more than the guess number.");
-            return false;
-        }
-        System.out.println("Congratulation! You won!");
-        return true;
+    public String getTurnPlayer() {
+        return name;
     }
 
-    public void startGame() {
-        //create 2 players to play
-        System.out.println("Type your number my first player: ");
-        Player player1 = new Player();
-        System.out.println("Type your number my second player: ");
-        Player player2 = new Player();
-        System.out.println("Name of the first (1) player is: " + player1.getName());
-        System.out.println("Name of the second (2) player is: " + player2.getName());
+    public String setTurnPlayer(String name) {
+        this.name = name;
+        return name;
+    }
 
-        while(true){
-            System.out.println(player1.getName() + ", input a namber, please" );
-            int num1 = player1.receivedNumber();
+    public int receivedNumber() {
+        System.out.print("Please, type your number, " + name + ": ");
+        int number = input.nextInt();
+        return number;
+    }
 
-            System.out.println("Player " + player1.getName() + " entered " + player1.getNumber());
-            boolean checkNum1 = checkOut(num1);
-            if(checkNum1) {
-               break;
-            }
-            System.out.println(player2.getName() + ", input a namber, please" );
-            int num2 = player2.receivedNumber();
-
-            System.out.println("Player " + player2.getName() + " entered " + player2.getNumber());
-            boolean checkNum2 = checkOut(num2);
-            if(checkNum2) {
-               break;
-            }
+    public boolean checkOut(int number) {
+        if(number < guessNumber) {
+            System.out.println("It's less than the guess number, " + name);
+            return false;
+        } else if (number > guessNumber) {
+            System.out.println("It's more than the guess number, " + name);
+            return false;
         }
+        System.out.println("Congratulation! You won! " + name);
+        return true;
     }
 }
 

@@ -105,17 +105,14 @@ public class JaegerGetSet {
     }
 
     int acceleration() {
-        this.speed += 1;
-        return this.speed;
+        speed ++;
+        return speed;
     }
 
-    public void printInfo() {
-        System.out.println("=> Name of the first robot is: " + this.modelName);
-        System.out.println(this.modelName + " height is " + this.height);
-        System.out.println(this.modelName + " weighs is " + this.weight);
-        System.out.println(this.modelName + " has a energyCore " + this.getEnergyCore());
-        System.out.println(this.modelName + " killed " + this.kaijuKilled);
-        System.out.println(this.modelName + " accelerated: " + this.acceleration());
-        System.out.println("*-*-*-*-*-*-**-*-*-*-*-*-**-*-*-*-*-*-**-*-*-*-*-*-*");
+    public String toString() {
+        return modelName + " has a mark: " + mark + ", it was made in " + origin + ", it has an equipment " +
+        equipment + ", it has an energyCore " + energyCore + ", it has a speed " + speed +
+        ", it has an armor" + armor + ", it height is " + height + ", it weighs is " + weight +
+        ", it killed " + kaijuKilled + ", it accelerated " + acceleration();
     }
 }

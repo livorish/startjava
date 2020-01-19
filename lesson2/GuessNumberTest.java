@@ -11,8 +11,34 @@ class GuessNumberTest {
 
         System.out.println(rules);
         System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+        // fitst player
+        Scanner input = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        String name1 = input.nextLine();
+        Player player1 = new Player(name1);
+        System.out.println("Name of the first (1) player is: " + player1.getName());
+        // second player
+        System.out.print("Type your name: ");
+        String name2 = input.nextLine();
+        Player player2 = new Player(name2);
+        System.out.println("Name of the second (2) player is: " + player2.getName());
 
         GuessNumber game = new GuessNumber();
-        game.startGame();
+        while(true){
+            game.setTurnPlayer(player1.getName());
+            int n = game.receivedNumber();
+            int num1 = player1.setNumber(n);
+            boolean number1 = game.checkOut(num1);
+            if(number1) {
+               break;
+            }
+            game.setTurnPlayer(player2.getName());
+            int n2 = game.receivedNumber();
+            int num2 = player2.setNumber(n2);
+            boolean number2 = game.checkOut(num2);
+            if(number2) {
+               break;
+            }
+        }
     }
 }

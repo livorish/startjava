@@ -4,22 +4,22 @@ public class Calculator {
 
     private int num1;
     private int num2;
-    private char operator;
+    private char s;
 
     public void setNumberOne(int num1) {
-        this.num1 = num2;
+        this.num1 = num1;
     }
 
     public void setNumberTwo(int num2) {
         this.num2 = num2;
     }
 
-    public void setOperator(char operator){
-        this.operator = operator;
+    public void setOperator(char s) {
+        this.s = s;
     }
 
-    public void checkingResult() {
-        switch(operator) {
+    public void calculate() {
+        switch(s) {
             case '+':
                 System.out.println("The sum of two numbers is equal to " + (num1 + num2));
                 break;
