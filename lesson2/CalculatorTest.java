@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.lang.*;
 class CalculatorTest {
 
     public static void main(String[] argv) {
@@ -7,27 +7,29 @@ class CalculatorTest {
         Calculator calc = new Calculator();
         String answer = "yes";
 
-        while(true) {
-            if (answer.equals("yes")) {
-                System.out.print("Input the first number: ");
-                int num1 = inputUser.nextInt();
-                calc.setNumberOne(num1);
+        while(!answer.equals("no")) {
+                if (answer.equals("yes")){
+                    System.out.print("Input the first number: ");
+                    int num1 = inputUser.nextInt();
+                    calc.setNumberOne(num1);
 
-                System.out.print("Input a math operator: ");
-                char s = inputUser.next().charAt(0);
-                calc.setOperator(s);
+                    System.out.print("Input a math operator: ");
+                    char sign = inputUser.next().charAt(0);
+                    calc.setSign(sign);
 
-                System.out.print("Input the second number: ");
-                int num2 = inputUser.nextInt();
-                calc.setNumberTwo(num2);
-                calc.calculate();
-            }
-            if (answer.equals("no")) {
-                break;
-            } else {
-                System.out.println("Would you like to calculate something else? Input 'yes' or 'no'");
-                answer = inputUser.next();
-            }
+                    System.out.print("Input the second number: ");
+                    int num2 = inputUser.nextInt();
+                    calc.setNumberTwo(num2);
+                    calc.calculate();
+                    System.out.println("Would you like to calculate something else? Input 'yes' or 'no'");
+                    answer = inputUser.nextLine().trim().replaceAll("[^\\w ]", "");
+                }
+                answer = inputUser.nextLine().replaceAll(" ", "");
+                if ( answer.equals("no") || answer.equals("yes") ) {
+                    continue;
+                } else {
+                    System.out.println("would you like to calculate something else? Input 'yes' or 'no'");
+                }
         }
     }
 }
